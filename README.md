@@ -1,4 +1,4 @@
-# OrderFlow API — Pedidos Assíncronos com RabbitMQ | Projeto 8/9
+# OrderFlow API — Pedidos Assíncronos com RabbitMQ 
 
 Projeto educacional de **Java Backend** com API REST, mensageria RabbitMQ, persistência PostgreSQL e padrão **Transactional Outbox**.
 
@@ -89,7 +89,3 @@ Após alguns segundos, consulte `GET /api/v1/orders/1`: status esperado `COMPLET
 - O consumo com `@Version` pode gerar conflito em atualizações concorrentes, que serão encaminhadas à DLQ sem retry.
 - Não há pagamento, estoque, cancelamento, tracing, paginação, observabilidade nem testes de integração com containers.
 - Não há garantia de ordem global entre eventos.
-
-## O que explicar numa entrevista
-
-**Mensageria assíncrona vs HTTP síncrono**, exchange/queue/binding/routing key, acknowledgements, dead-letter, publisher confirms, transações, outbox, consistência eventual, idempotência, concorrência e testes unitários.
